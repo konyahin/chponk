@@ -8,7 +8,7 @@ if CommandLine.arguments.count < 2 {
 let originalTime = Int(CommandLine.arguments[1])! * 60
 var time = originalTime
 
-let title = CommandLine.arguments.count > 2 ?  CommandLine.arguments[2] : ""
+let title = CommandLine.arguments.count > 2 ?  CommandLine.arguments[2...].joined(separator: " ") : ""
 
 let app = NSApplication.shared
 let statusItem = NSStatusBar.system
